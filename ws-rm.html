@@ -50,6 +50,43 @@
         </section>
         <section data-markdown>
           <script type="text/template">
+            ##Reliable Messaging Model
+
+            An **Application Source (AS)** wishes to reliably send messages to an **Application
+            Destination (AD)** over an unreliable infrastructure. To accomplish this they
+            make use of a **Reliable Messaging Source (RMS)** and a **Reliable Messaging
+            Destination (RMD)**. 
+            
+            *Pulled from Wikipedia*
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ##Reliable Messaging Model
+
+            The AS sends a message to the RMS. The RMS uses the
+            WS-ReliableMessaging (WS-RM) protocol to transmit the message to the RMD. The
+            RMD delivers the message to the AD. If the RMS cannot transmit the message to
+            the RMD for some reason, it must raise an exception or otherwise indicate to
+            the AS that the message was not transmitted. 
+            
+            *Pulled from Wikipedia*
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ##Reliable Messaging Model
+
+            The AS and RMS may be implemented
+            within the same process space or they may be separate components. Similarly,
+            the AD and RMD may exist within the same process space or they may be separate
+            components.
+
+            *Pulled from Wikipedia*
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
             ## Sequence
             - The **sequence** is the central construct around which WS-ReliableMessaging is based.
             - Before any message is sent, a sequence must be initiated between the client and server.
@@ -57,6 +94,12 @@
             - Once all messages are sent, the sequence is closed by the client and server.
           </script>
         </section>
+        <!--
+        <section data-markdown>
+          <script type="text/template">
+          </script>
+        </section>
+        -->
 
 			</div>
 
